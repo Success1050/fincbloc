@@ -20,15 +20,15 @@ const NavHeader: React.FC = () => {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   const menuItems: MenuItem[] = [
-    {
-      label: "Buy Crypto",
-      submenu: [
-        { label: "Credit/Debit Card", href: "#" },
-        { label: "P2P Trading", href: "#" },
-        { label: "Bank Transfer", href: "#" },
-        { label: "Third Party", href: "#" },
-      ],
-    },
+    // {
+    //   label: "Buy Crypto",
+    //   submenu: [
+    //     { label: "Credit/Debit Card", href: "#" },
+    //     { label: "P2P Trading", href: "#" },
+    //     { label: "Bank Transfer", href: "#" },
+    //     { label: "Third Party", href: "#" },
+    //   ],
+    // },
     { label: "Markets", href: "#" },
     {
       label: "Spot",

@@ -23,9 +23,11 @@ const Footer: React.FC = () => {
         { label: "Terms of Service", href: "/terms" },
         { label: "Privacy Notice", href: "/privacy" },
         { label: "Risk Warning", href: "/risk" },
-        { label: "Announcements", href: "/announcements" },
-        { label: "FincBloc App", href: "/app" },
-        { label: "FincBloc Wallet", href: "/wallet", badge: "NEW" },
+        {
+          label: "FincBloc Wallet",
+          href: "https://web3.fincbloc.com/support",
+          badge: "NEW",
+        },
       ],
     },
     {
