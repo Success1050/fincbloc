@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown, Menu, X, Bell, Download, Globe } from "lucide-react";
+import Link from "next/link";
 
 interface SubMenuItem {
   label: string;
@@ -80,12 +81,12 @@ const NavHeader: React.FC = () => {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#" className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg p-1.5">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="bg-linear-to-r from-orange-500 to-yellow-500 rounded-lg p-1.5">
                 <div className="w-5 h-5 bg-black rounded"></div>
               </div>
               <span className="text-xl font-bold">FincBloc</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
