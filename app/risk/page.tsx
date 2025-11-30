@@ -25,14 +25,14 @@ export default function FincBlocRisk() {
                   determine their own risk appetite. Investors shall seek legal
                   assistance or help from independent professionals before
                   engaging in highly leveraged futures contracts transactions.
-                  By registering, using or otherwise accessing Blofin.com
+                  By registering, using or otherwise accessing fincbloc.com
                   Services or any part or parts related thereto, you are deemed
                   to have, after seeking independent professional advice, read,
                   understood, and accepted every and all risks associated with
                   trading of Digital Assets and/or its derivatives in their
                   entirety. All terms used in this notice, which are defined in
-                  the Blofin.com Terms of Use (the “Terms of Use”)
-                  https://blofin.com/en/terms, have the same meaning and
+                  the fincbloc.com Terms of Use (the “Terms of Use”)
+                  https://fincbloc.com/en/terms, have the same meaning and
                   construction as in the Terms of Use..
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function FincBlocRisk() {
                 investment decisions made.
               </p>
 
-              {/* WHAT PERSONAL INFORMATION DOES BLOFIN COLLECT AND PROCESS? */}
+              {/* WHAT PERSONAL INFORMATION DOES fincbloc COLLECT AND PROCESS? */}
               <h2 className="text-[#222] text-[20px] font-bold mt-4">
                 Existing Risks
               </h2>
@@ -64,7 +64,7 @@ export default function FincBlocRisk() {
                 RESTITUTION OR RECOVERY.
               </p>
 
-              {/* WHAT PERSONAL INFORMATION DOES BLOFIN COLLECT AND PROCESS? */}
+              {/* WHAT PERSONAL INFORMATION DOES fincbloc COLLECT AND PROCESS? */}
               <h2 className="text-[#222] text-[20px] font-bold mt-4">
                 1. Risk of Price Fluctuation
               </h2>
@@ -106,14 +106,15 @@ export default function FincBlocRisk() {
               </h2>
               <p className="text-gray-700">
                 Digital asset derivatives trading may face policy regulatory
-                risks in certain jurisdictions. Blofin.com may exerciese its
+                risks in certain jurisdictions. fincbloc.com may exerciese its
                 discretion to discontinue any or all of its services in certain
                 jurisdictions due to a change in policy, laws and regulations,
                 or regulatory environment. Investors should make prudent
                 judgments and ensure they understand the policy and regulatory
                 background of the relevant jurisdictions before trading.
-                Blofin.com does not bear any liability as a result of change in
-                aforesaid policy, regulatory environment, laws, or regulations.
+                fincbloc.com does not bear any liability as a result of change
+                in aforesaid policy, regulatory environment, laws, or
+                regulations.
               </p>
 
               {/* HOW SECURE IS MY INFORMATION? */}
@@ -133,12 +134,12 @@ export default function FincBlocRisk() {
                 5. Fees & Charges
               </h2>
               <p className="text-gray-700">
-                Our fees and charges are set out https://blofin.com/en/fees.
-                Blofin.com may, in its discretion, update the fees & charges
+                Our fees and charges are set out https://fincbloc.com/en/fees.
+                fincbloc.com may, in its discretion, update the fees & charges
                 from time to time. Please be aware of all costs and charges that
                 apply to you, because such costs and charges will affect the
                 gains you generate or losses you may suffer from using
-                Blofin.com Services.
+                fincbloc.com Services.
               </p>
 
               {/* HOW SECURE IS MY INFORMATION? */}
@@ -146,8 +147,8 @@ export default function FincBlocRisk() {
                 6. Availability Risk
               </h2>
               <p className="text-gray-700">
-                We do not guarantee that the Blofin.com Services will be
-                available at any particular time or that Blofin.com Services
+                We do not guarantee that the fincbloc.com Services will be
+                available at any particular time or that fincbloc.com Services
                 will not be subject to unplanned service outages or network
                 congestion. It may not be possible for you to buy, sell, store,
                 transfer, send or receive Digital Assets, or close your
@@ -160,10 +161,11 @@ export default function FincBlocRisk() {
               </h2>
               <p className="text-gray-700">
                 Third parties, such as payment providers, custodians, and
-                banking partners may be involved in the provision of Blofin.com
-                Services. You may be subject to the terms & conditions of these
-                third parties, and Blofin.com may not be responsible for any
-                loss that these third parties may cause to you.
+                banking partners may be involved in the provision of
+                fincbloc.com Services. You may be subject to the terms &
+                conditions of these third parties, and fincbloc.com may not be
+                responsible for any loss that these third parties may cause to
+                you.
               </p>
 
               {/* HOW SECURE IS MY INFORMATION? */}
@@ -171,10 +173,10 @@ export default function FincBlocRisk() {
                 8. Security Risk
               </h2>
               <p className="text-gray-700">
-                It is not possible for Blofin.com to eliminate all security
-                risks. You are responsible for keeping your Blofin.com Account
+                It is not possible for fincbloc.com to eliminate all security
+                risks. You are responsible for keeping your fincbloc.com Account
                 password safe, and you may be responsible for all the
-                transactions under your Blofin.com Account, whether you
+                transactions under your fincbloc.com Account, whether you
                 authorised them or not. Transactions in Digital Assets is
                 irreversible, and losses due to fraudulent or unauthorised
                 transactions may not not recoverable.
@@ -226,20 +228,20 @@ export default function FincBlocRisk() {
               </h2>
               <p className="text-gray-700">
                 When a user uses high leverage, it can bring greater risk to the
-                user and Blofin.com. Therefore, in order to maintain market
-                stability, Blofin.com will monitor the positions of users who
-                use high leverage. When Blofin.com determines that the user's
+                user and fincbloc.com. Therefore, in order to maintain market
+                stability, fincbloc.com will monitor the positions of users who
+                use high leverage. When fincbloc.com determines that the user's
                 position may cause harm to the user or other positions on
-                Blofin.com, appropriate measures will be taken by the exchange
+                fincbloc.com, appropriate measures will be taken by the exchange
                 including, but not limited to, communication, risk disclosure,
-                forced position reduction and forced liquidation. Blofin.com
+                forced position reduction and forced liquidation. fincbloc.com
                 may, but is not obligated to, send a notification to the user on
                 the measures taken. Derivatives trading rules in the digital
                 asset derivatives market, including, but not limited to,
                 adjustment coefficients, expiration dates and product rules, can
-                be modified according to the actual operation of Blofin.com. If
-                Blofin.com needs to deliver products earlier or later due to
-                special circumstances, after fulfilling the obligation of
+                be modified according to the actual operation of fincbloc.com.
+                If fincbloc.com needs to deliver products earlier or later due
+                to special circumstances, after fulfilling the obligation of
                 notification by means of announcement on the official website or
                 SMS, the user must tend to their own position in a timely
                 manner. Any possible loss or gain caused thereby shall be borne
@@ -270,36 +272,36 @@ export default function FincBlocRisk() {
                 about transaction procedures and information about the potential
                 risks. HOWEVER, ANY DECISION TO USE OUR PRODUCTS OR SERVICES IS
                 MADE SOLY BY YOU. No communication or information provided to
-                you by Blofin.com is intended as, or shall be considered or
+                you by fincbloc.com is intended as, or shall be considered or
                 construed as, investment advice, financial advice, trading
                 advice, or any other sort of advice. You are solely responsible
                 for determining whether any investment, investment strategy or
                 related transaction is appropriate for you according to your
                 personal investment objectives, financial circumstances and risk
-                tolerance. Blofin.com is not your broker, intermediary, agent,
+                tolerance. fincbloc.com is not your broker, intermediary, agent,
                 or advisor and has no fiduciary relationship or obligation to
                 you in connection with any trades or other decisions or
-                activities undertaken by you using Blofin.com Services. We do
-                not monitor whether your use of Blofin.com Services is
+                activities undertaken by you using fincbloc.com Services. We do
+                not monitor whether your use of fincbloc.com Services is
                 consistent with your financial goals and objectives. It is up to
                 you to assess whether your financial resources are adequate for
                 your financial activity with us, and to your risk appetite in
                 the products and services you use.
               </p>
               <p className="text-gray-700 mt-3">
-                Blofin.com sincerely hopes and suggests that investors will
+                fincbloc.com sincerely hopes and suggests that investors will
                 prudently decide whether to participate in Digital Asset
                 transaction and allocate their Digital Assets reasonably based
                 on their own conditions, such as risk tolerance and financial
                 capabilities.
               </p>
               <p className="text-gray-700 mt-3">
-                Blofin.com is a trading platform for crypto products. Trading in
-                cryptocurrency derivatives involves substantial risk. Please
-                consider carefully whether Blofin.com is suitable for you to
+                fincbloc.com is a trading platform for crypto products. Trading
+                in cryptocurrency derivatives involves substantial risk. Please
+                consider carefully whether fincbloc.com is suitable for you to
                 use. For details, please check our Terms of Use
-                https://blofin.com/en/terms), Risk Disclosure and Privacy
-                Policy(https://blofin.com/en/privacy).
+                https://fincbloc.com/en/terms), Risk Disclosure and Privacy
+                Policy(https://fincbloc.com/en/privacy).
               </p>
             </div>
           </article>

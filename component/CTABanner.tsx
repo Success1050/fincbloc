@@ -13,7 +13,7 @@ const CTABanner: React.FC = () => {
 
         {/* CTA Button */}
         <Link
-          href="/signup"
+          href={"https://dash.fincbloc.com/register"}
           className="inline-flex items-center gap-3 rounded-xl bg-orange-500 px-8 py-4 text-lg font-semibold text-black transition-all duration-300 hover:bg-orange-600 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/50 md:px-10 md:py-5 md:text-xl"
         >
           <svg

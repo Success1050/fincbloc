@@ -34,43 +34,11 @@ const Footer: React.FC = () => {
       title: "Products",
       links: [
         { label: "Buy Crypto", href: "/buy-crypto" },
-        { label: "Futures Trading", href: "/futures" },
-        { label: "Spot Trading", href: "/spot" },
-        { label: "Futures Grid", href: "/futures-grid" },
         { label: "Trading Bots", href: "/bots" },
         { label: "Copy Trading", href: "/copy-trading" },
-        { label: "Sub-Account in UTA", href: "/sub-account" },
-        { label: "Earn", href: "/earn" },
-        { label: "Rewards Hub", href: "/rewards" },
-        { label: "Activity Center", href: "/activity" },
-        { label: "Research", href: "/research" },
-        { label: "News", href: "/news" },
       ],
     },
-    {
-      title: "Trade",
-      links: [
-        { label: "BTC USDT", href: "/trade/btc-usdt" },
-        { label: "ETH USDT", href: "/trade/eth-usdt" },
-        { label: "DOGE USDT", href: "/trade/doge-usdt" },
-        { label: "SOL USDT", href: "/trade/sol-usdt" },
-        { label: "XRP USDT", href: "/trade/xrp-usdt" },
-        { label: "Crypto Price", href: "/prices" },
-        { label: "Bitcoin Price", href: "/price/bitcoin" },
-        { label: "Ethereum Price", href: "/price/ethereum" },
-        { label: "Solana Price", href: "/price/solana" },
-        { label: "XRP Price", href: "/price/xrp" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        { label: "Support Center", href: "/support" },
-        { label: "Submit a request", href: "/support/request" },
-        { label: "Fee Schedule", href: "/fees" },
-        { label: "Official Verification", href: "/verification" },
-      ],
-    },
+
     {
       title: "Service",
       links: [
@@ -88,7 +56,7 @@ const Footer: React.FC = () => {
     <footer className="w-full bg-black px-4 py-12 md:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {/* Logo and Copyright */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <h3 className="mb-4 text-2xl font-bold text-white">FincBloc</h3>

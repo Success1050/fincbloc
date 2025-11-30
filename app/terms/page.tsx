@@ -33,7 +33,7 @@ export default function FincBlocArticle() {
 
             {/* Reference Link */}
             <p className="text-[#222] leading-relaxed font-bold mb-8">
-              BY MAKING USE OR SIGNING UP FOR BLOFIN.COM SERVICES, YOU
+              BY MAKING USE OR SIGNING UP FOR fincbloc.COM SERVICES, YOU
               ACKNOWLEDGE AND AGREE THAT: .
             </p>
 
@@ -96,31 +96,32 @@ export default function FincBlocArticle() {
               <h2 className="text-gray-700 text-[20px]">1. ABOUT</h2>
               <ol className="list-decimal mt-2 pl-8 text-gray-700">
                 <li>
-                  BloFin mainly serves as a global online platform for digital
+                  fincbloc mainly serves as a global online platform for digital
                   assets trading, and providers users with a trading platform
                   and other digital assets related Services. Users must, in
                   accordance with the Terms herein, register and open an account
-                  with BloFin and deposit digital assets into their account
+                  with fincbloc and deposit digital assets into their account
                   prior to trading. Users may, subject to the restrictions set
                   out in these Terms, apply for withdrawal of their digital
                   assets.
                 </li>
                 <li>
-                  Although BloFin commits to maintaining the accuracy of the
-                  information provided through to its users, BloFin cannot and
+                  Although fincbloc commits to maintaining the accuracy of the
+                  information provided through to its users, fincbloc cannot and
                   does not guarantee its accuracy, applicability, reliability,
-                  integrity, performance or appropriateness, nor shall BloFin be
-                  liable for any loss or damage that may be caused directly or
-                  indirectly arising from your use of the information provided
-                  to you. The information provided by BloFin may change without
-                  notice, and you agree to do your own research and thereafter,
-                  make independent decisions despite the information provided by
-                  BloFin. BloFin does not provide investment or consulting
-                  advice of any kind, and is not responsible for the use or
-                  interpretation of information on BloFin. All users of BloFin
-                  must understand the risks involved in digital assets trading,
-                  and are recommended to exercise prudence and trade responsibly
-                  within their own capabilities.
+                  integrity, performance or appropriateness, nor shall fincbloc
+                  be liable for any loss or damage that may be caused directly
+                  or indirectly arising from your use of the information
+                  provided to you. The information provided by fincbloc may
+                  change without notice, and you agree to do your own research
+                  and thereafter, make independent decisions despite the
+                  information provided by fincbloc. fincbloc does not provide
+                  investment or consulting advice of any kind, and is not
+                  responsible for the use or interpretation of information on
+                  fincbloc. All users of fincbloc must understand the risks
+                  involved in digital assets trading, and are recommended to
+                  exercise prudence and trade responsibly within their own
+                  capabilities.
                 </li>
               </ol>
 
@@ -129,43 +130,43 @@ export default function FincBlocArticle() {
               <ol className="list-decimal mt-2 pl-8 text-gray-700">
                 <li>
                   By accessing, using, visiting and by clicking “Sign up” on the
-                  BloFin Platform, you acknowledge that you accept and agree to
-                  be bound by these Terms and any terms incorporated by
+                  fincbloc Platform, you acknowledge that you accept and agree
+                  to be bound by these Terms and any terms incorporated by
                   reference (if any). You further agree that these Terms
                   constitute a legal agreement and create a binding contract
-                  between you and BloFin.
+                  between you and fincbloc.
                 </li>
                 <li>
                   If you do not agree to be bound by these Terms, you must not
-                  access and utilize the BloFin Platform and should leave
+                  access and utilize the fincbloc Platform and should leave
                   immediately.
                 </li>
                 <li>
                   If you do not agree to be bound by the updated Terms, policy
                   and/or guidelines, you agree that your sole remedy is to
-                  immediately close your account on the BloFin Platform, in any
-                  event, within 30 days of such update being notified on the
-                  BloFin Platform. You agree that your continued use of the
-                  BloFin Platform after such 30-day period will constitute
+                  immediately close your account on the fincbloc Platform, in
+                  any event, within 30 days of such update being notified on the
+                  fincbloc Platform. You agree that your continued use of the
+                  fincbloc Platform after such 30-day period will constitute
                   acceptance of the updated Terms.
                 </li>
                 <li>
-                  BloFin reserves the right to change or modify or amend (as the
-                  case may be) these Terms, including any policy and guidelines
-                  at anytime and at BloFin’s sole discretion, subject to
-                  applicable laws and regulations. BloFin will notify such
-                  changes, modifications and amendments by updating the Terms on
-                  the BloFin Platform, and such changes, modifications and
-                  amendments shall take effect immediately upon being published
-                  on the BloFin Platform.
+                  fincbloc reserves the right to change or modify or amend (as
+                  the case may be) these Terms, including any policy and
+                  guidelines at anytime and at fincbloc’s sole discretion,
+                  subject to applicable laws and regulations. fincbloc will
+                  notify such changes, modifications and amendments by updating
+                  the Terms on the fincbloc Platform, and such changes,
+                  modifications and amendments shall take effect immediately
+                  upon being published on the fincbloc Platform.
                 </li>
                 <li>
-                  Unless explicitly provided for through BloFin’s written
+                  Unless explicitly provided for through fincbloc’s written
                   notice, you agree that the Terms take precedence over any
                   other agreement you may have with us.
                 </li>
                 <li>
-                  While BloFin may, at its sole and absolute discretion
+                  While fincbloc may, at its sole and absolute discretion
                   translate these terms into a language other than the English
                   language, you agree that any such translation shall only be
                   for your convenience and the English text shall prevail in the
@@ -182,32 +183,32 @@ export default function FincBlocArticle() {
               <h2 className="text-gray-700 text-[20px]">3. REGISTRATION</h2>
               <ol className="list-decimal mt-2 pl-8 text-gray-700">
                 <li>
-                  All users must apply for a BloFin account at
-                  (https://blofin.com/register) before using BloFin. When you
-                  register a BloFin account, you must provide information
+                  All users must apply for a fincbloc account at
+                  (https://fincbloc.com/register) before using fincbloc. When
+                  you register a fincbloc account, you must provide information
                   depending on whether you are an individual or acting on behalf
-                  of a legal entity set out below. BloFin may refuse, in its
+                  of a legal entity set out below. fincbloc may refuse, in its
                   absolute sole discretion to offer services to you or open an
                   account for you.
                 </li>
                 <li>
                   You agree, as part of your account registration, to provide
-                  complete and accurate information when registering a BloFin
-                  account. You further agree to provide BloFin with timely
+                  complete and accurate information when registering a fincbloc
+                  account. You further agree to provide fincbloc with timely
                   updates of information as and when such changes are effected.
-                  You agree that you may maintain only one account on BloFin at
-                  any given time.
+                  You agree that you may maintain only one account on fincbloc
+                  at any given time.
                 </li>
                 <li>
-                  You agree that any BloFin account registered can only be
-                  operated and/or used by the account registrant. BloFin
+                  You agree that any fincbloc account registered can only be
+                  operated and/or used by the account registrant. fincbloc
                   reserves the right to suspend, freeze, or cancel the use of
-                  the BloFin account by persons other than the account
+                  the fincbloc account by persons other than the account
                   registrant. If you suspect of become aware of any unauthorized
-                  use of your BloFin username and/or password, you should notify
-                  BloFin immediately. BloFin assumes no liability for any loss
-                  or damage (howsoever arising) from the use of your BloFin
-                  account by you or any third party with or without
+                  use of your fincbloc username and/or password, you should
+                  notify fincbloc immediately. fincbloc assumes no liability for
+                  any loss or damage (howsoever arising) from the use of your
+                  fincbloc account by you or any third party with or without
                   authorization.
                 </li>
               </ol>
@@ -217,13 +218,13 @@ export default function FincBlocArticle() {
               <ol className="list-decimal mt-2 pl-8 text-gray-700">
                 <li>
                   If you are an individual, you agree that by accessing or using
-                  the BloFin Platform, you represent, agree and warrant that you
-                  are at least 18 years of age and legally capable of forming a
-                  binding contract under applicable laws.
+                  the fincbloc Platform, you represent, agree and warrant that
+                  you are at least 18 years of age and legally capable of
+                  forming a binding contract under applicable laws.
                 </li>
                 <li>
-                  If you are accessing or using the BloFin Platform on behalf of
-                  a legal entity, you represent agree and warrant that such
+                  If you are accessing or using the fincbloc Platform on behalf
+                  of a legal entity, you represent agree and warrant that such
                   legal entity is duly organized and validly existing under
                   applicable laws of the jurisdiction of incorporation AND you
                   are duly authorized by such legal entity to act on its behalf.
@@ -232,33 +233,33 @@ export default function FincBlocArticle() {
                   Regardless of whether you are an individual or acting on
                   behalf of a legal entity, you represent, agree and warrant
                   that: (a) you have not previously been suspended or removed
-                  from using the BloFin Platform; (b) you do not have an
-                  existing BloFin account; (c) you will not transact with anyone
-                  on any trade or economic sanctions lists of any competent
-                  authority, including (for example) but not limited to the list
-                  of Specially Designated Nationals maintained by the Office of
-                  Foreign Assets Control of the U.S Department of the Treasure
-                  (OFAC) or the United Nations Security Council Sanctions List;
-                  (d) your use of the BloFin Platform will not violate any and
-                  all laws and regulations applicable to your or the legal
-                  entity on whose behalf you are acting, including but not
-                  limited to laws, regulations, guidelines on anti-money
+                  from using the fincbloc Platform; (b) you do not have an
+                  existing fincbloc account; (c) you will not transact with
+                  anyone on any trade or economic sanctions lists of any
+                  competent authority, including (for example) but not limited
+                  to the list of Specially Designated Nationals maintained by
+                  the Office of Foreign Assets Control of the U.S Department of
+                  the Treasure (OFAC) or the United Nations Security Council
+                  Sanctions List; (d) your use of the fincbloc Platform will not
+                  violate any and all laws and regulations applicable to your or
+                  the legal entity on whose behalf you are acting, including but
+                  not limited to laws, regulations, guidelines on anti-money
                   laundering, anti-corruption and counter-terrorist financing.
                 </li>
                 <li>
                   Please note that there are legal requirements in various
                   countries which may restrict the products and services that
-                  BloFin can lawfully provide. Accordingly, some products,
-                  services, and certain functionality on the BloFin Platform may
-                  not be available to you, or may be restricted in certain
+                  fincbloc can lawfully provide. Accordingly, some products,
+                  services, and certain functionality on the fincbloc Platform
+                  may not be available to you, or may be restricted in certain
                   jurisdictions or regions or to certain users. You agree that
                   you shall be responsible for informing yourself about and
                   observing any restrictions and/or requirements imposed with
-                  respect to the access to and use of the BloFin Platform in
-                  your local jurisdiction from which you accessed the BloFin
-                  Platform. BloFin reserve the right to change, modify, amend
+                  respect to the access to and use of the fincbloc Platform in
+                  your local jurisdiction from which you accessed the fincbloc
+                  Platform. fincbloc reserve the right to change, modify, amend
                   and/or impose additional restrictions with respect to your
-                  access to the BloFin Platform from time to time and in its
+                  access to the fincbloc Platform from time to time and in its
                   sole discretion without prior notification.
                 </li>
               </ol>
@@ -269,18 +270,18 @@ export default function FincBlocArticle() {
               </h2>
               <ol className="list-decimal mt-2 pl-8 text-gray-700">
                 <li>
-                  Your registration of an account with BloFin will be deemed
+                  Your registration of an account with fincbloc will be deemed
                   your agreement to provide required personal information for
                   identity verification. Such information will be used to verify
                   users’ identity, identify traces of money laundering,
                   terrorist financing, fraud and other financial crimes through
-                  BloFin, or for other lawful purposes stated by BloFin. We will
-                  collect, use and share such information in accordance with our
-                  Privacy Policy. In addition to providing such information, you
-                  agree to allow us to keep a record of that information during
-                  the period for which your account is active and within five
-                  (5) years after your account is closed, in compliance with
-                  global industry standards on data storage.
+                  fincbloc, or for other lawful purposes stated by fincbloc. We
+                  will collect, use and share such information in accordance
+                  with our Privacy Policy. In addition to providing such
+                  information, you agree to allow us to keep a record of that
+                  information during the period for which your account is active
+                  and within five (5) years after your account is closed, in
+                  compliance with global industry standards on data storage.
                 </li>
                 <li>
                   You also authorize us to conduct necessary investigations
@@ -299,21 +300,21 @@ export default function FincBlocArticle() {
                   information.
                 </li>
                 <li>
-                  After registration of a BloFin account, you agree to ensure
+                  After registration of a fincbloc account, you agree to ensure
                   that the information you have disclosed at clause 5.2 above
                   remains true, complete and accurate. If there are any grounds
                   for believing that any of the information you have provided is
-                  incorrect, false, outdated or incomplete, BloFin reserves the
-                  right to send you a notice to demand correction, directly
+                  incorrect, false, outdated or incomplete, fincbloc reserves
+                  the right to send you a notice to demand correction, directly
                   delete the relevant information, and, as the case may be,
-                  terminate all or part of the BloFin Services that is provided
-                  for you.
+                  terminate all or part of the fincbloc Services that is
+                  provided for you.
                 </li>
                 <li>
-                  You agree that to access BloFin, submission of certain
+                  You agree that to access fincbloc, submission of certain
                   personally identifiable information will be necessary. In this
-                  connection, please review BloFin’s Privacy Policy at
-                  https://blofin.com/en/privacy for a summary of BloFin’s
+                  connection, please review fincbloc’s Privacy Policy at
+                  https://fincbloc.com/en/privacy for a summary of fincbloc’s
                   guidelines regarding the collection and use of personally
                   identifiable information.
                 </li>

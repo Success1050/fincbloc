@@ -136,12 +136,16 @@ const NavHeader: React.FC = () => {
             <button className="hidden md:flex p-2 hover:bg-gray-800 rounded-lg transition-colors">
               <Globe className="w-5 h-5" />
             </button>
-            <button className="hidden md:block px-4 py-2 text-sm hover:bg-gray-800 rounded-lg transition-colors">
-              Log in
-            </button>
-            <button className="hidden md:block px-4 py-2 text-sm bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors font-medium">
-              Sign up
-            </button>
+            <Link href={"https://dash.fincbloc.com/login"}>
+              <button className="hidden md:block px-4 py-2 text-sm hover:bg-gray-800 rounded-lg transition-colors">
+                Log in
+              </button>
+            </Link>
+            <Link href={"https://dash.fincbloc.com/register"}>
+              <button className="hidden md:block px-4 py-2 text-sm bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors font-medium">
+                Sign up
+              </button>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button

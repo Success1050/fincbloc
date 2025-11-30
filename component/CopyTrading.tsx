@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 interface Trader {
   name: string;
@@ -192,9 +193,12 @@ const CopyTradingCarousel: React.FC = () => {
                 </div>
 
                 {/* Copy Button */}
-                <button className="w-full py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium transition-colors">
-                  Copy
-                </button>
+
+                <Link href={"https://dash.fincbloc.com/register"}>
+                  <button className="w-full py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium transition-colors">
+                    Copy
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
