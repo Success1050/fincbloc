@@ -44,10 +44,6 @@ const Footer: React.FC = () => {
       links: [
         { label: "Affiliates", href: "/affiliates" },
         { label: "Referral", href: "/referral" },
-        { label: "Market Data", href: "/market-data" },
-        { label: "Proof of Reserves", href: "/proof-of-reserves" },
-        { label: "APIs", href: "/api" },
-        { label: "VIP Program", href: "/vip" },
       ],
     },
   ];
