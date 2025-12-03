@@ -11,9 +11,9 @@ const HeroSection: React.FC = () => {
           {/* Left Content */}
           <div className="z-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
-              FincBloc - Where Whales
+              FincBloc - Where Small Trades
               <br />
-              are Made
+              Grow Giant
             </h1>
 
             {/* Email Signup Form */}

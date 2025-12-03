@@ -79,7 +79,7 @@ const InfiniteLogoScroll: React.FC = () => {
         }
 
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 5s linear infinite;
         }
 
         .animate-scroll:hover {

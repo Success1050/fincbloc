@@ -47,11 +47,9 @@ export default function GoogleTranslate() {
   }, []);
 
   return (
-    <div className="w-full">
-      <div
-        id="google_translate_element"
-        className="google-translate-container"
-      ></div>
-    </div>
+    <div
+      id="google_translate_element"
+      className="google-translate-container bg-black w-full"
+    ></div>
   );
 }

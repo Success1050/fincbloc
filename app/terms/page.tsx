@@ -1,4 +1,11 @@
-"use client";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TERMS OF USE - help center",
+  description:
+    "Convert cryptocurrencies instantly with zero fees. Real-time swap with multi-asset support.",
+  keywords: ["crypto", "converter", "cryptocurrency", "bitcoin", "ethereum"],
+};
 
 export default function FincBlocArticle() {
   return (

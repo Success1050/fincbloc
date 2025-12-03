@@ -75,9 +75,7 @@ const FeaturesCarousel: React.FC = () => {
         <div className="flex items-center justify-between mb-6 text-sm text-gray-400">
           <div className="flex items-center gap-2">
             <span className="inline-block w-4 h-4 bg-gray-800 rounded">📢</span>
-            <span>
-              FincBloc Rewards Hub: Brand-New Upgrade Is Live! 11/27/2025
-            </span>
+            <span>FincBloc Rewards Hub: Brand-New Upgrade Is Live!</span>
           </div>
         </div>
 

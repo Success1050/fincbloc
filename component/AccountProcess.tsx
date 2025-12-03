@@ -3,6 +3,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Step {
   title: string;
@@ -50,9 +51,11 @@ const CryptoJourneySection: React.FC = () => {
                         {step.title}
                       </h3>
                     </div>
-                    <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all duration-300">
-                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    <Link href="https://dash.fincbloc.com/register">
+                      <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all duration-300">
+                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
                   </div>
                 </div>
               ))}

@@ -99,12 +99,8 @@ const NavHeader: React.FC = () => {
           </nav>
 
           {/* Right Side Actions */}
-          {/* Right Side Actions */}
           <div className="flex items-center gap-4 shrink-0">
             {/* Language Switcher */}
-            <div className="min-w-[120px]">
-              <GoogleTranslate />
-            </div>
 
             {/* Auth Buttons */}
             <Link href="https://dash.fincbloc.com/login">
@@ -179,9 +175,6 @@ const NavHeader: React.FC = () => {
             ))}
 
             {/* Mobile Language Switcher */}
-            <div className="px-4 py-3">
-              <GoogleTranslate />
-            </div>
 
             {/* Mobile Auth Buttons */}
             <div className="pt-4 space-y-2 border-t border-gray-800 mt-4">

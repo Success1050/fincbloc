@@ -35,6 +35,9 @@ body > .skiptranslate:first-child {
 
 body {
   top: 0 !important;
+  overflow-x: hidden;
+  background-color: black;
+  min-height: 100%;
 }
 
 /* ---------------------------------------------------- */
@@ -45,6 +48,19 @@ body {
   display: inline-block;
   position: relative;
   z-index: 1000;
+}
+
+.goog-te-menu-value span {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+  .goog-te-gadget-simple {
+    width: 100% !important;
+    min-width: 100% !important;
+    display: flex !important;
+  }
 }
 
 /* ---------------------------------------------------- */
