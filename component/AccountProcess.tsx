@@ -17,7 +17,7 @@ const CryptoJourneySection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-black text-white py-16 md:py-24">
+    <section className="bg-[#0f0f0f] text-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12 leading-tight">
           FUEL YOUR JOURNEY IN CRYPTO

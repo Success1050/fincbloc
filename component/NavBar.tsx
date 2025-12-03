@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, Menu, X, Bell, Download, Globe } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
+import GoogleTranslate from "./GoogleTranslate";
 
 interface SubMenuItem {
   label: string;
@@ -21,52 +22,24 @@ const NavHeader: React.FC = () => {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   const menuItems: MenuItem[] = [
-    // {
-    //   label: "Buy Crypto",
-    //   submenu: [
-    //     { label: "Credit/Debit Card", href: "#" },
-    //     { label: "P2P Trading", href: "#" },
-    //     { label: "Bank Transfer", href: "#" },
-    //     { label: "Third Party", href: "#" },
-    //   ],
-    // },
-    { label: "Markets", href: "#" },
+    { label: "About us", href: "/about" },
     {
       label: "Spot",
-      submenu: [
-        { label: "Spot Trading", href: "#" },
-        { label: "Margin Trading", href: "#" },
-        { label: "Convert", href: "#" },
-      ],
-    },
-    {
-      label: "🔥 Futures",
-      icon: "🔥",
-      submenu: [
-        { label: "USDT-M Futures", href: "#" },
-        { label: "Coin-M Futures", href: "#" },
-        { label: "Copy Trading", href: "#" },
-        { label: "Trading Bots", href: "#" },
-      ],
+      submenu: [{ label: "Convert", href: "/convert" }],
     },
     {
       label: "Copy Trading",
       submenu: [
-        { label: "Explore Traders", href: "#" },
-        { label: "Become a Trader", href: "#" },
-        { label: "Leaderboard", href: "#" },
+        { label: "Buy Crypto", href: "/buy-crypto" },
+        { label: "Trading Bots", href: "/bots" },
+        { label: "Copy Trading", href: "/copy-trading" },
       ],
     },
-    { label: "Earn", href: "#" },
-    { label: "Rewards Hub", href: "#" },
     {
       label: "More",
       submenu: [
-        { label: "API", href: "#" },
-        { label: "Affiliate Program", href: "#" },
-        { label: "Institutional", href: "#" },
-        { label: "Learn", href: "#" },
-        { label: "Support", href: "#" },
+        { label: "Affiliates programs", href: "/affiliates" },
+        { label: "Referral", href: "/referral" },
       ],
     },
   ];
@@ -76,11 +49,11 @@ const NavHeader: React.FC = () => {
   };
 
   return (
-    <header className="bg-black text-white border-b border-gray-800">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
+    <header className="bg-black text-white border-b border-gray-800 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <div className="bg-linear-to-r from-orange-500 to-yellow-500 rounded-lg p-1.5">
                 <div className="w-5 h-5 bg-black rounded"></div>
@@ -89,8 +62,8 @@ const NavHeader: React.FC = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex items-center justify-center space-x-8 mx-8 grow">
             {menuItems.map((item) => (
               <div key={item.label} className="relative group">
                 {item.submenu ? (
@@ -126,23 +99,22 @@ const NavHeader: React.FC = () => {
           </nav>
 
           {/* Right Side Actions */}
-          <div className="flex items-center space-x-3">
-            <button className="hidden md:flex p-2 hover:bg-gray-800 rounded-lg transition-colors">
-              <Bell className="w-5 h-5" />
-            </button>
-            <button className="hidden md:flex p-2 hover:bg-gray-800 rounded-lg transition-colors">
-              <Download className="w-5 h-5" />
-            </button>
-            <button className="hidden md:flex p-2 hover:bg-gray-800 rounded-lg transition-colors">
-              <Globe className="w-5 h-5" />
-            </button>
-            <Link href={"https://dash.fincbloc.com/login"}>
-              <button className="hidden md:block px-4 py-2 text-sm hover:bg-gray-800 rounded-lg transition-colors">
+          {/* Right Side Actions */}
+          <div className="flex items-center gap-4 shrink-0">
+            {/* Language Switcher */}
+            <div className="min-w-[120px]">
+              <GoogleTranslate />
+            </div>
+
+            {/* Auth Buttons */}
+            <Link href="https://dash.fincbloc.com/login">
+              <button className="hidden md:block px-5 py-2 text-sm hover:bg-gray-800 rounded-lg transition-colors font-medium">
                 Log in
               </button>
             </Link>
-            <Link href={"https://dash.fincbloc.com/register"}>
-              <button className="hidden md:block px-4 py-2 text-sm bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors font-medium">
+
+            <Link href="https://dash.fincbloc.com/register">
+              <button className="hidden md:block px-5 py-2 text-sm bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors font-medium shadow-lg shadow-orange-500/20">
                 Sign up
               </button>
             </Link>
@@ -165,7 +137,7 @@ const NavHeader: React.FC = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-gray-800 bg-black">
-          <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
+          <div className="px-4 py-4 space-y-1">
             {menuItems.map((item) => (
               <div key={item.label}>
                 {item.submenu ? (
@@ -206,14 +178,23 @@ const NavHeader: React.FC = () => {
               </div>
             ))}
 
+            {/* Mobile Language Switcher */}
+            <div className="px-4 py-3">
+              <GoogleTranslate />
+            </div>
+
             {/* Mobile Auth Buttons */}
             <div className="pt-4 space-y-2 border-t border-gray-800 mt-4">
-              <button className="w-full px-4 py-3 text-sm hover:bg-gray-800 rounded-lg transition-colors text-left">
-                Log in
-              </button>
-              <button className="w-full px-4 py-3 text-sm bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors font-medium">
-                Sign up
-              </button>
+              <Link href="https://dash.fincbloc.com/login">
+                <button className="w-full px-4 py-3 text-sm hover:bg-gray-800 rounded-lg transition-colors text-left font-medium">
+                  Log in
+                </button>
+              </Link>
+              <Link href="https://dash.fincbloc.com/register">
+                <button className="w-full px-4 py-3 text-sm bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors font-medium">
+                  Sign up
+                </button>
+              </Link>
             </div>
           </div>
         </div>

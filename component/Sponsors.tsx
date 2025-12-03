@@ -23,7 +23,7 @@ const InfiniteLogoScroll: React.FC = () => {
   ];
 
   return (
-    <section className="w-full overflow-hidden bg-black py-8 md:py-12">
+    <section className="w-full overflow-hidden bg-[#0f0f0f] py-8 md:py-12">
       <div className="relative">
         {/* Gradient overlays */}
         <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-linear-to-r from-black to-transparent md:w-32" />

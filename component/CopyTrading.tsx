@@ -122,7 +122,7 @@ const CopyTradingCarousel: React.FC = () => {
   };
 
   return (
-    <section className="bg-black text-white py-12 md:py-16">
+    <section className="bg-[#0f0f0f] text-white py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

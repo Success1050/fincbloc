@@ -32,7 +32,7 @@ const ProductsSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-black text-white py-16 md:py-24">
+    <section className="bg-[#0f0f0f] text-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16">

@@ -39,7 +39,7 @@ const WorldwideBuzzMedia: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-black px-4 py-16 md:px-8 lg:px-16">
+    <section className="w-full bg-[#0f0f0f] px-4 py-16 md:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <h2 className="mb-12 text-center text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">

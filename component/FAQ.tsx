@@ -45,7 +45,7 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-black px-4 py-16 md:px-8 lg:px-16">
+    <section className="w-full bg-[#0f0f0f] px-4 py-16 md:px-8 lg:px-16">
       <div className="mx-auto max-w-5xl">
         {/* Header */}
         <div className="mb-12 flex items-center justify-between">

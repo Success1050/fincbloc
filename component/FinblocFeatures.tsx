@@ -69,7 +69,7 @@ const FeaturesCarousel: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-black text-white py-8 overflow-hidden">
+    <section className="relative bg-[#0f0f0f] text-white py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Announcement Banner */}
         <div className="flex items-center justify-between mb-6 text-sm text-gray-400">

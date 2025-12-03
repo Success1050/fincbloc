@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CTABanner: React.FC = () => {
   return (
-    <section className="w-full bg-black py-16 md:py-20 lg:py-24">
+    <section className="w-full bg-[#0f0f0f] py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 text-center md:px-8 lg:px-16">
         {/* Heading */}
         <h2 className="mb-8 text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">

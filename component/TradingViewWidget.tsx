@@ -12,16 +12,20 @@ const TradingViewWidget = memo(() => {
         "https://s3.tradingview.com/external-embedding/embed-widget-screener.js";
       script.type = "text/javascript";
       script.async = true;
-      script.innerHTML = JSON.stringify({
-        defaultColumn: "overview",
-        screener_type: "crypto_mkt",
-        displayCurrency: "USD",
-        colorTheme: "dark",
-        isTransparent: false,
-        locale: "en",
-        width: "100%",
-        height: 550,
-      });
+
+      // Remove JSON.stringify() - use template literal instead
+      script.innerHTML = `
+        {
+          "defaultColumn": "overview",
+          "screener_type": "crypto_mkt",
+          "displayCurrency": "USD",
+          "colorTheme": "dark",
+          "isTransparent": false,
+          "locale": "en",
+          "width": "100%",
+          "height": 550
+        }`;
+
       container.current.appendChild(script);
     }
   }, []);
@@ -37,7 +41,7 @@ TradingViewWidget.displayName = "TradingViewWidget";
 
 const MarketsSection: React.FC = () => {
   return (
-    <section className="bg-black text-white py-12 md:py-16">
+    <section className="bg-[#0f0f0f] text-white py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="mb-8">
