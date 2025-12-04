@@ -66,7 +66,7 @@ const SecuritySection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Left Card - Security Info */}
           <motion.div
-            className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 md:p-10"
+            className="bg-linear-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 md:p-10"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -172,14 +172,14 @@ const SecuritySection: React.FC = () => {
                     }}
                   >
                     {/* Key 1 */}
-                    <div className="w-6 h-16 bg-gradient-to-b from-orange-600 to-orange-800 rounded-sm relative">
+                    <div className="w-6 h-16 bg-linear-to-b from-orange-600 to-orange-800 rounded-sm relative">
                       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-black rounded-full"></div>
                       <div className="absolute bottom-1 left-0 right-0 h-3 bg-orange-900"></div>
                     </div>
 
                     {/* FincBloc Tag */}
                     <motion.div
-                      className="w-12 h-16 bg-gradient-to-br from-orange-500 to-orange-700 transform rotate-12 flex items-center justify-center text-black font-bold text-xs rounded-sm shadow-lg"
+                      className="w-12 h-16 bg-linear-to-br from-orange-500 to-orange-700 transform rotate-12 flex items-center justify-center text-black font-bold text-xs rounded-sm shadow-lg"
                       whileHover={{ rotate: 20, scale: 1.1 }}
                     >
                       <div className="text-center">
@@ -195,7 +195,7 @@ const SecuritySection: React.FC = () => {
 
           {/* Right Card - Lock & Shield Visual */}
           <motion.div
-            className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 md:p-10 flex items-center justify-center relative overflow-hidden"
+            className="bg-linear-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 md:p-10 flex items-center justify-center relative overflow-hidden"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -203,7 +203,7 @@ const SecuritySection: React.FC = () => {
           >
             {/* Glow effect */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-transparent"
+              className="absolute inset-0 bg-linear-to-br from-orange-500/5 via-transparent to-transparent"
               animate={{
                 opacity: [0.3, 0.6, 0.3],
               }}
@@ -225,10 +225,10 @@ const SecuritySection: React.FC = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <div className="w-48 h-56 bg-gradient-to-br from-gray-800 to-black rounded-t-full border-4 border-gray-700 relative">
+                  <div className="w-48 h-56 bg-linear-to-br from-gray-800 to-black rounded-t-full border-4 border-gray-700 relative">
                     {/* Shield details */}
                     <motion.div
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-orange-900/30 to-transparent rounded-full"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-linear-to-br from-orange-900/30 to-transparent rounded-full"
                       animate={{
                         scale: [1, 1.1, 1],
                         opacity: [0.3, 0.5, 0.3],
@@ -253,7 +253,7 @@ const SecuritySection: React.FC = () => {
                   <div className="relative">
                     {/* Lock body */}
                     <motion.div
-                      className="w-32 h-24 bg-gradient-to-br from-gray-900 to-black border-4 border-orange-500 rounded-xl flex items-center justify-center shadow-2xl"
+                      className="w-32 h-24 bg-linear-to-br from-gray-900 to-black border-4 border-orange-500 rounded-xl flex items-center justify-center shadow-2xl"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -294,19 +294,19 @@ const SecuritySection: React.FC = () => {
 
                 {/* Check mark ribbon */}
                 <motion.div
-                  className="absolute top-8 right-4 w-20 h-24 bg-gradient-to-br from-orange-500 to-orange-600 transform rotate-12 rounded-lg flex items-center justify-center shadow-xl z-30"
+                  className="absolute top-8 right-4 w-20 h-24 bg-linear-to-br from-orange-500 to-orange-600 transform rotate-12 rounded-lg flex items-center justify-center shadow-xl z-30"
                   initial={{ scale: 0, rotate: -45 }}
                   whileInView={{ scale: 1, rotate: 12 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
                   whileHover={{ rotate: 20, scale: 1.1 }}
                 >
-                  <Check className="w-12 h-12 text-white stroke-[3]" />
+                  <Check className="w-12 h-12 text-white stroke-3" />
                 </motion.div>
 
                 {/* Decorative orange ribbon wave */}
                 <motion.div
-                  className="absolute bottom-0 right-0 w-40 h-2 bg-gradient-to-r from-transparent via-orange-500 to-orange-600 transform -rotate-12 blur-sm"
+                  className="absolute bottom-0 right-0 w-40 h-2 bg-linear-to-r from-transparent via-orange-500 to-orange-600 transform -rotate-12 blur-sm"
                   initial={{ scaleX: 0, opacity: 0 }}
                   whileInView={{ scaleX: 1, opacity: 1 }}
                   viewport={{ once: true }}
@@ -314,7 +314,7 @@ const SecuritySection: React.FC = () => {
                   style={{ transformOrigin: "left" }}
                 ></motion.div>
                 <motion.div
-                  className="absolute bottom-4 right-8 w-32 h-3 bg-gradient-to-r from-orange-500 to-orange-600 transform rotate-6 rounded-full"
+                  className="absolute bottom-4 right-8 w-32 h-3 bg-linear-to-r from-orange-500 to-orange-600 transform rotate-6 rounded-full"
                   initial={{ scaleX: 0, opacity: 0 }}
                   whileInView={{ scaleX: 1, opacity: 1 }}
                   viewport={{ once: true }}

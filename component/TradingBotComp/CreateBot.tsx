@@ -154,7 +154,7 @@ export default function FincBlocCreateBot() {
                   transition: { duration: 0.3 },
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-gradient-to-br from-neutral-900 to-black border border-neutral-800 rounded-2xl p-6 sm:p-8 hover:border-neutral-700 transition-all cursor-pointer group"
+                className="bg-linear-to-br from-neutral-900 to-black border border-neutral-800 rounded-2xl p-6 sm:p-8 hover:border-neutral-700 transition-all cursor-pointer group"
               >
                 {/* Icon and Title */}
                 <div className="flex items-start justify-between mb-6">

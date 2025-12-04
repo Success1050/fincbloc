@@ -87,7 +87,7 @@ const ProductsSection: React.FC = () => {
                 y: -10,
                 transition: { duration: 0.3 },
               }}
-              className="group bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-300 cursor-pointer"
+              className="group bg-linear-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-300 cursor-pointer"
             >
               {/* Icon */}
               <motion.div
