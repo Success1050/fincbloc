@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight, TrendingUp } from "lucide-react";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
 
 interface Trader {
   name: string;
@@ -66,6 +67,28 @@ const CopyTradingCarousel: React.FC = () => {
     },
   ];
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 320;
@@ -97,13 +120,17 @@ const CopyTradingCarousel: React.FC = () => {
 
     return (
       <svg width={width} height={height} className="w-full h-20">
-        <polyline
+        <motion.polyline
           points={points}
           fill="none"
           stroke="rgb(34, 197, 94)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          whileInView={{ pathLength: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         />
         <polyline
           points={points}
@@ -125,45 +152,74 @@ const CopyTradingCarousel: React.FC = () => {
     <section className="bg-[#0f0f0f] text-white py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <motion.div
+          className="flex items-center justify-between mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
             Copy Trades. Easy. Smart
           </h2>
-          <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors">
+          <motion.button
+            className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <ChevronRight className="w-6 h-6" />
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
         {/* Carousel */}
         <div className="relative group">
           {/* Left Arrow */}
-          <button
+          <motion.button
             onClick={() => scroll("left")}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-gray-900/90 hover:bg-gray-800 rounded-full flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 -ml-5 backdrop-blur-sm"
             aria-label="Scroll left"
+            whileHover={{ scale: 1.1, x: -5 }}
+            whileTap={{ scale: 0.9 }}
           >
             <ChevronLeft className="w-5 h-5" />
-          </button>
+          </motion.button>
 
           {/* Scrollable Container */}
-          <div
+          <motion.div
             ref={scrollContainerRef}
             className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
             }}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             {traders.map((trader, index) => (
-              <div
+              <motion.div
                 key={index}
+                variants={cardVariants}
+                whileHover={{
+                  y: -10,
+                  scale: 1.02,
+                }}
+                transition={{ duration: 0.3 }}
                 className="shrink-0 w-[280px] bg-linear-to from-gray-900 to-black border border-gray-800 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 cursor-pointer"
               >
                 {/* Trader Info */}
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-linear-to from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-2xl">
+                  <motion.div
+                    className="w-12 h-12 bg-linear-to from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-2xl"
+                    whileHover={{
+                      rotate: [0, -10, 10, -10, 0],
+                      scale: 1.1,
+                    }}
+                    transition={{ duration: 0.5 }}
+                  >
                     {trader.avatar}
-                  </div>
+                  </motion.div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-white">{trader.name}</h3>
                     <p className="text-sm text-gray-500">
@@ -173,19 +229,48 @@ const CopyTradingCarousel: React.FC = () => {
                 </div>
 
                 {/* ROI */}
-                <div className="mb-2">
+                <motion.div
+                  className="mb-2"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
                   <p className="text-xs text-gray-500 mb-1">300 ROI</p>
-                  <p className="text-3xl font-bold text-white">{trader.roi}</p>
-                </div>
+                  <motion.p
+                    className="text-3xl font-bold text-white"
+                    whileHover={{ scale: 1.05, color: "#f97316" }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {trader.roi}
+                  </motion.p>
+                </motion.div>
 
                 {/* PnL */}
-                <div className="flex items-center gap-1 mb-4">
+                <motion.div
+                  className="flex items-center gap-1 mb-4"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                >
                   <span className="text-xs text-gray-500">PnL</span>
                   <span className="text-sm text-green-500 font-semibold">
                     {trader.pnl}
                   </span>
-                  <TrendingUp className="w-3 h-3 text-green-500" />
-                </div>
+                  <motion.div
+                    animate={{
+                      y: [0, -3, 0],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <TrendingUp className="w-3 h-3 text-green-500" />
+                  </motion.div>
+                </motion.div>
 
                 {/* Chart */}
                 <div className="mb-4 -mx-2">
@@ -193,24 +278,33 @@ const CopyTradingCarousel: React.FC = () => {
                 </div>
 
                 {/* Copy Button */}
-
                 <Link href={"https://dash.fincbloc.com/register"}>
-                  <button className="w-full py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium transition-colors">
+                  <motion.button
+                    className="w-full py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium transition-colors"
+                    whileHover={{
+                      scale: 1.05,
+                      backgroundColor: "#f97316",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     Copy
-                  </button>
+                  </motion.button>
                 </Link>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Right Arrow */}
-          <button
+          <motion.button
             onClick={() => scroll("right")}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-gray-900/90 hover:bg-gray-800 rounded-full flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 -mr-5 backdrop-blur-sm"
             aria-label="Scroll right"
+            whileHover={{ scale: 1.1, x: 5 }}
+            whileTap={{ scale: 0.9 }}
           >
             <ChevronRight className="w-5 h-5" />
-          </button>
+          </motion.button>
         </div>
       </div>
 

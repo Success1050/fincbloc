@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const HeroSection: React.FC = () => {
   return (
@@ -9,37 +10,69 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-24 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="z-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
+          <motion.div
+            className="z-10"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               FincBloc - Where Small Trades
               <br />
               Grow Giant
-            </h1>
+            </motion.h1>
 
             {/* Email Signup Form */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-8 max-w-2xl">
-              <input
+            <motion.div
+              className="flex flex-col sm:flex-row gap-3 mb-8 max-w-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <motion.input
                 type="text"
                 placeholder="Email / Phone"
                 className="flex-1 px-6 py-4 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-orange-500 transition-colors text-white placeholder-gray-500"
+                whileFocus={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
               />
 
               <Link href={"https://dash.fincbloc.com/login"}>
-                <button className="px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 whitespace-nowrap">
+                <motion.button
+                  className="px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 whitespace-nowrap"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                >
                   <span className="text-xl">🎁</span>
                   <span>Sign up</span>
-                </button>
+                </motion.button>
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Visual - Abstract Wave/Whale */}
-          <div className="relative hidden lg:block">
+          <motion.div
+            className="relative hidden lg:block"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
             <div className="relative w-full h-[600px]">
               {/* Main glowing effect */}
-              <div className="absolute top-1/4 left-1/4 w-3/4 h-96">
+              <motion.div
+                className="absolute top-1/4 left-1/4 w-3/4 h-96"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2, delay: 0.5 }}
+              >
                 <div className="absolute inset-0 bg-linear-to-br from-orange-500/30 via-orange-600/20 to-transparent rounded-full blur-3xl"></div>
-              </div>
+              </motion.div>
 
               {/* Abstract wave shapes */}
               <svg
@@ -49,33 +82,42 @@ const HeroSection: React.FC = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 {/* Upper wave */}
-                <path
+                <motion.path
                   d="M100 250 Q 200 150, 350 200 Q 450 230, 550 180"
                   stroke="url(#gradient1)"
                   strokeWidth="4"
                   fill="none"
                   opacity="0.7"
                   strokeLinecap="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.7 }}
+                  transition={{ duration: 2, delay: 0.6, ease: "easeInOut" }}
                 />
 
                 {/* Middle wave */}
-                <path
+                <motion.path
                   d="M50 300 Q 180 200, 320 260 Q 460 300, 580 240"
                   stroke="url(#gradient2)"
                   strokeWidth="3"
                   fill="none"
                   opacity="0.5"
                   strokeLinecap="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.5 }}
+                  transition={{ duration: 2, delay: 0.8, ease: "easeInOut" }}
                 />
 
                 {/* Lower subtle wave */}
-                <path
+                <motion.path
                   d="M80 350 Q 200 280, 340 320 Q 480 350, 600 300"
                   stroke="url(#gradient3)"
                   strokeWidth="2"
                   fill="none"
                   opacity="0.3"
                   strokeLinecap="round"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.3 }}
+                  transition={{ duration: 2, delay: 1, ease: "easeInOut" }}
                 />
 
                 <defs>
@@ -116,36 +158,42 @@ const HeroSection: React.FC = () => {
               </svg>
 
               {/* Animated whale character */}
-              <div className="absolute bottom-20 right-24 text-7xl animate-float drop-shadow-[0_0_30px_rgba(249,115,22,0.5)]">
+              <motion.div
+                className="absolute bottom-20 right-24 text-7xl drop-shadow-[0_0_30px_rgba(249,115,22,0.5)]"
+                animate={{
+                  y: [0, -25, 0],
+                  rotate: [-5, 5, -5],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                style={{ originX: 0.5, originY: 0.5 }}
+              >
                 🐋
-              </div>
+              </motion.div>
 
               {/* Additional glow effect around whale */}
-              <div className="absolute bottom-20 right-24 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl animate-pulse"></div>
+              <motion.div
+                className="absolute bottom-20 right-24 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.2, 0.4, 0.2],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              ></motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-
-      {/* Background effects */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gray-900/50 to-transparent pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-900/10 via-transparent to-transparent pointer-events-none"></div>
-
-      {/* Animations */}
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(-5deg);
-          }
-          50% {
-            transform: translateY(-25px) rotate(5deg);
-          }
-        }
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 };
