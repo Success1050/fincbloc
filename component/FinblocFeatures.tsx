@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface Feature {
   title: string;
@@ -22,14 +23,6 @@ const FeaturesCarousel: React.FC = () => {
       description: "Welcome Gift",
       icon: "🎁",
     },
-
-    // {
-    //   title: "Stay at the top",
-    //   highlight: "5,000 USDT",
-    //   subtitle: "Rewards",
-    //   description: "Welcome Gift",
-    //   icon: "🎁",
-    // },
     {
       title: "Enjoy",
       highlight: "100% Loss",
@@ -69,7 +62,7 @@ const FeaturesCarousel: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-[#0f0f0f] text-white py-8 overflow-hidden">
+    <section className="relative bg-[#0f0f0f] text-white py-8">
       <div className="max-w-7xl mx-auto px-4">
         {/* Announcement Banner */}
         <div className="flex items-center justify-between mb-6 text-sm text-gray-400">
@@ -90,19 +83,27 @@ const FeaturesCarousel: React.FC = () => {
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          {/* Scrollable Container */}
+          {/* Scrollable Container - Added padding-top for hover space */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth pb-4 pt-4"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
             }}
           >
             {features.map((feature, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="hrink-0 w-[280px] bg-linear-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 cursor-pointer group/card"
+                className="shrink-0 w-[280px] bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors duration-300 cursor-pointer group/card"
+                whileHover={{
+                  y: -12,
+                  transition: {
+                    duration: 0.3,
+                    ease: "easeOut",
+                  },
+                }}
+                whileTap={{ scale: 0.98 }}
               >
                 <div className="space-y-4">
                   {/* Text Content */}
@@ -125,10 +126,10 @@ const FeaturesCarousel: React.FC = () => {
 
                   {/* Icon/Illustration */}
                   <div className="relative h-32 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-linear-to-br from-orange-500/10 to-transparent rounded-lg blur-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent rounded-lg blur-xl"></div>
                     {index === 0 && (
                       <div className="relative">
-                        <div className="w-24 h-24 bg-linear-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center text-4xl shadow-lg shadow-orange-500/50">
+                        <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center text-4xl shadow-lg shadow-orange-500/50">
                           {feature.icon}
                         </div>
                         <div className="absolute -top-2 -right-2 w-8 h-8 bg-gray-800 rounded-full border-2 border-orange-500 flex items-center justify-center text-xs">
@@ -138,7 +139,7 @@ const FeaturesCarousel: React.FC = () => {
                     )}
                     {index === 1 && (
                       <div className="relative">
-                        <div className="w-20 h-20 bg-linear-to-br from-orange-500/20 to-orange-600/10 rounded-full flex items-center justify-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-full flex items-center justify-center">
                           <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center text-3xl">
                             {feature.icon}
                           </div>
@@ -148,7 +149,7 @@ const FeaturesCarousel: React.FC = () => {
                     )}
                     {index === 2 && (
                       <div className="relative">
-                        <div className="w-24 h-24 bg-linear-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center shadow-lg shadow-orange-500/30 border-2 border-orange-500/30">
+                        <div className="w-24 h-24 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center shadow-lg shadow-orange-500/30 border-2 border-orange-500/30">
                           <span className="text-5xl text-orange-500 font-bold">
                             {feature.icon}
                           </span>
@@ -158,7 +159,7 @@ const FeaturesCarousel: React.FC = () => {
                     )}
                     {index === 3 && (
                       <div className="relative">
-                        <div className="w-24 h-24 bg-linear-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-4xl shadow-lg shadow-orange-500/50">
+                        <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-4xl shadow-lg shadow-orange-500/50">
                           {feature.icon}
                         </div>
                         <div className="absolute bottom-0 left-0 w-16 h-3 bg-orange-500/30 rounded-full blur-sm"></div>
@@ -166,7 +167,7 @@ const FeaturesCarousel: React.FC = () => {
                     )}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 

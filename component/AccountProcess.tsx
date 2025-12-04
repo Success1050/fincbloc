@@ -26,11 +26,11 @@ const CryptoJourneySection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <Image
-              src={"/1.png"}
+              src={"/home1.png"}
               alt="process"
               height={500}
               width={500}
-              className="w-[360px]"
+              className="w-[400px]"
             />
           </div>
 

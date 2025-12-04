@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 
 export default function FincBlocMilestones() {
   return (
@@ -19,7 +20,13 @@ export default function FincBlocMilestones() {
             {/* 2025 - Left Side */}
             <div className="relative grid grid-cols-2 gap-4 sm:gap-8 md:gap-12">
               {/* Left Content */}
-              <div className="text-right pr-4 sm:pr-6 md:pr-8 lg:pr-12">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="text-right pr-4 sm:pr-6 md:pr-8 lg:pr-12"
+              >
                 <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6">
                   2025
                 </h3>
@@ -60,7 +67,7 @@ export default function FincBlocMilestones() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Right Side - Empty */}
               <div />
@@ -75,7 +82,13 @@ export default function FincBlocMilestones() {
               <div />
 
               {/* Right Content */}
-              <div className="text-left pl-4 sm:pl-6 md:pl-8 lg:pl-12">
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="text-left pl-4 sm:pl-6 md:pl-8 lg:pl-12"
+              >
                 <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6">
                   2024
                 </h3>
@@ -111,7 +124,7 @@ export default function FincBlocMilestones() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Orange Dot */}
               <div className="absolute left-1/2 top-0 w-3 h-3 sm:w-4 sm:h-4 bg-orange-500 rounded-full transform -translate-x-1/2 shadow-lg shadow-orange-500/50" />
