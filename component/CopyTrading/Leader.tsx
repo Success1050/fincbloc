@@ -8,7 +8,7 @@ export default function FincBlocLeaderboard() {
 
   const topROITraders = [
     {
-      name: "Ziutson Trader",
+      name: "PrecisionTrade3",
       avatar: "/images/trader1.jpg",
       rank: "21D",
       total: "500",
@@ -21,7 +21,7 @@ export default function FincBlocLeaderboard() {
       chart: "up",
     },
     {
-      name: "WaveOps X",
+      name: "CasiTrades",
       avatar: "/images/trader2.jpg",
       rank: "29",
       total: "500",
@@ -34,7 +34,7 @@ export default function FincBlocLeaderboard() {
       chart: "up",
     },
     {
-      name: "VEXON",
+      name: "CryptoTony",
       avatar: "/images/trader3.jpg",
       rank: "9",
       total: "500",
@@ -50,7 +50,7 @@ export default function FincBlocLeaderboard() {
 
   const topPrudentTraders = [
     {
-      name: "Gdron",
+      name: "360_Trader",
       avatar: "/images/trader4.jpg",
       rank: "3",
       total: "300",
@@ -63,7 +63,7 @@ export default function FincBlocLeaderboard() {
       chart: "up",
     },
     {
-      name: "sekon",
+      name: "SadafJardan",
       avatar: "/images/trader5.jpg",
       rank: "1",
       total: "200",
@@ -76,7 +76,7 @@ export default function FincBlocLeaderboard() {
       chart: "up",
     },
     {
-      name: "MAK2006",
+      name: "CryptoWendyO",
       avatar: "/images/trader6.jpg",
       rank: "0",
       total: "200",

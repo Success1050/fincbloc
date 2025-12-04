@@ -25,7 +25,7 @@ export default function FincBlocLeaderboard() {
 
   const highestCopiers = [
     {
-      name: "Ziutson Trader",
+      name: "SadafJardan",
       rank: 210,
       total: 500,
       roi: "30D ROI",
@@ -39,7 +39,7 @@ export default function FincBlocLeaderboard() {
       avatarText: "Z",
     },
     {
-      name: "CryptoFx",
+      name: "CryptoWendyO",
       rank: 76,
       total: 200,
       roi: "30D ROI",
@@ -53,7 +53,7 @@ export default function FincBlocLeaderboard() {
       avatarText: "C",
     },
     {
-      name: "Gem Hunters Algo Bot",
+      name: "360_Trader",
       rank: 128,
       total: 500,
       roi: "30D ROI",
@@ -65,51 +65,6 @@ export default function FincBlocLeaderboard() {
       chartData: [40, 42, 45, 43, 48, 52, 55, 58, 60, 62, 65, 68, 70, 72, 75],
       avatarColor: "bg-blue-500",
       avatarText: "G",
-    },
-  ];
-
-  const topNewTalents = [
-    {
-      name: "sekon",
-      rank: 1,
-      total: 200,
-      roi: "7D ROI",
-      roiPercent: "245.82%",
-      pnl: "7.37",
-      mdd: "0.00%",
-      aum: "100",
-      sharpe: "10.08",
-      chartData: [10, 15, 25, 40, 60, 75, 85, 90, 92, 95, 97, 98, 99, 100, 100],
-      avatarColor: "bg-orange-500",
-      avatarText: "S",
-    },
-    {
-      name: "Cz Bnb",
-      rank: 1,
-      total: 200,
-      roi: "7D ROI",
-      roiPercent: "149.67%",
-      pnl: "1.49",
-      mdd: "8.55%",
-      aum: "104",
-      sharpe: "9.83",
-      chartData: [20, 25, 30, 40, 50, 60, 70, 75, 80, 85, 88, 90, 92, 95, 97],
-      avatarColor: "bg-cyan-500",
-      avatarText: "C",
-    },
-    {
-      name: "Zukifi ETH",
-      rank: 63,
-      total: 200,
-      roi: "7D ROI",
-      roiPercent: "137.24%",
-      pnl: "48.93",
-      mdd: "25.80%",
-      aum: "17,129",
-      sharpe: "13.80",
-      chartData: [30, 40, 50, 60, 70, 80, 85, 90, 88, 92, 95, 93, 96, 98, 97],
-      avatarColor: "bg-purple-500",
-      avatarText: "Z",
     },
   ];
 
