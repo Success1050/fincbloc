@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function FincBlocAIBots() {
   const bots = [
@@ -120,25 +121,75 @@ export default function FincBlocAIBots() {
     },
   ];
 
+  // Container animation for staggering children
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  // Card animation variants
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.4, 0.25, 1] as const,
+      },
+    },
+  };
+
   return (
     <div className="w-full bg-black py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex justify-between items-center mb-12 sm:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="flex justify-between items-center mb-12 sm:mb-16"
+        >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
             AI Bots
           </h2>
-        </div>
+        </motion.div>
 
         {/* Bots Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+        >
           {bots.map((bot, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={cardVariants}
+              whileHover={{
+                scale: 1.05,
+                y: -10,
+                transition: { duration: 0.3 },
+              }}
               className="bg-linear-to-br from-neutral-900 to-black border border-neutral-800 rounded-2xl p-6 sm:p-8 hover:border-neutral-700 transition-all"
             >
               {/* Header */}
-              <div className="mb-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+                className="mb-6"
+              >
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-2xl sm:text-3xl font-bold text-white">
                     {bot.pair}
@@ -150,12 +201,28 @@ export default function FincBlocAIBots() {
                 <p className={`text-sm ${bot.typeColor || "text-gray-400"}`}>
                   {bot.type}
                 </p>
-              </div>
+              </motion.div>
 
               {/* Stats */}
-              <div className="space-y-4 mb-6">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                className="space-y-4 mb-6"
+              >
                 {bot.stats.map((stat, idx) => (
-                  <div key={idx} className="flex justify-between items-center">
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      delay: 0.4 + index * 0.1 + idx * 0.1,
+                      duration: 0.4,
+                    }}
+                    className="flex justify-between items-center"
+                  >
                     <span className="text-sm text-gray-400">{stat.label}</span>
                     <span
                       className={`text-lg font-bold ${
@@ -164,33 +231,60 @@ export default function FincBlocAIBots() {
                     >
                       {stat.value}
                     </span>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
               {/* Details */}
-              <div className="space-y-3 mb-6">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
+                className="space-y-3 mb-6"
+              >
                 {bot.details.map((detail, idx) => (
-                  <div key={idx} className="flex justify-between items-center">
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      delay: 0.6 + index * 0.1 + idx * 0.1,
+                      duration: 0.4,
+                    }}
+                    className="flex justify-between items-center"
+                  >
                     <span className="text-sm text-gray-500">
                       {detail.label}
                     </span>
                     <span className="text-sm text-white font-medium">
                       {detail.value}
                     </span>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
               {/* Create Button */}
-              <Link href={bot.url}>
-                <button className="w-full bg-neutral-800 hover:bg-orange-500 text-white text-base font-semibold py-3 rounded-lg transition-colors">
-                  Create Now
-                </button>
-              </Link>
-            </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
+              >
+                <Link href={bot.url}>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full bg-neutral-800 hover:bg-orange-500 text-white text-base font-semibold py-3 rounded-lg transition-colors"
+                  >
+                    Create Now
+                  </motion.button>
+                </Link>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

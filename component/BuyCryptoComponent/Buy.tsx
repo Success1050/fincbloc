@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FincBlocBuyCrypto() {
   const [spendAmount, setSpendAmount] = useState("");
@@ -149,7 +150,13 @@ export default function FincBlocBuyCrypto() {
     <div className="w-full min-h-screen bg-black py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex justify-between items-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-between items-center mb-12"
+        >
           <div>
             <h1 className="text-xl sm:text-2xl text-white font-semibold mb-1">
               One-Click Buy
@@ -173,17 +180,29 @@ export default function FincBlocBuyCrypto() {
             </svg>
             <span className="text-sm sm:text-base">Orders</span>
           </button>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-baseline-last gap-8">
           {/* Left Section */}
           <div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8">
+            <motion.h2
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8"
+            >
               Buy Crypto
-            </h2>
+            </motion.h2>
 
             {/* Payment Methods */}
-            <div className="mb-8">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-8"
+            >
               <div className="flex gap-3">
                 <p className="text-gray-400 text-sm mb-4">Supported</p>
                 <div className="w-12 h-8 bg-white rounded flex items-center justify-center text-xs font-bold text-blue-600">
@@ -202,18 +221,28 @@ export default function FincBlocBuyCrypto() {
                   Pay
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Hot Cryptos */}
-            <div className="bg-linear-to-br from-neutral-900 to-black border border-neutral-800 rounded-2xl p-6">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="bg-linear-to-br from-neutral-900 to-black border border-neutral-800 rounded-2xl p-6"
+            >
               <h3 className="text-xl font-semibold text-white mb-6">
                 Hot Cryptos
               </h3>
 
               <div className="space-y-4">
-                {cryptos.map((crypto) => (
-                  <button
+                {cryptos.map((crypto, index) => (
+                  <motion.button
                     key={crypto.symbol}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                     className="w-full flex items-center justify-between p-3 hover:bg-neutral-800/50 rounded-lg transition-colors"
                   >
                     <div className="flex items-center gap-3">
@@ -239,14 +268,19 @@ export default function FincBlocBuyCrypto() {
                         {crypto.change}
                       </span>
                     </div>
-                  </button>
+                  </motion.button>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Section - Order Form */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             <div className="bg-linear-to-br from-neutral-900 to-black border border-neutral-800 rounded-2xl p-6 sm:p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
                 Enter Amount
@@ -371,105 +405,123 @@ export default function FincBlocBuyCrypto() {
                 Log In/Sign Up
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Payment Method Modal */}
-      {showPaymentModal && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-          <div className="bg-neutral-900 rounded-2xl max-w-lg w-full p-6 relative">
-            {/* Close Button */}
-            <button
-              onClick={() => setShowPaymentModal(false)}
-              className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
+      <AnimatePresence>
+        {showPaymentModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-neutral-900 rounded-2xl max-w-lg w-full p-6 relative"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-
-            <h2 className="text-2xl font-bold text-white mb-6">Pay With</h2>
-
-            {/* Recommended Section */}
-            <div className="mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-white font-semibold">Recommended</h3>
-                <span className="text-gray-400 text-sm">Price</span>
-              </div>
-
-              {paymentMethods.recommended.map((method, index) => (
-                <button
-                  key={index}
-                  onClick={() => handlePaymentMethodSelect(method)}
-                  className="w-full bg-black border border-neutral-700 rounded-lg p-4 flex items-center justify-between hover:border-orange-500 transition-colors mb-3"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="flex gap-0.5">
-                      <div className="w-5 h-5 bg-red-600 rounded-full"></div>
-                      <div className="w-5 h-5 bg-orange-500 rounded-full -ml-2"></div>
-                    </div>
-                    <span className="text-white font-medium">
-                      {method.name}
-                    </span>
-                  </div>
-                  <span className="text-white">1 USDT = {method.rate} USD</span>
-                </button>
-              ))}
-            </div>
-
-            {/* Third Party Section */}
-            <div className="mb-6">
-              <h3 className="text-white font-semibold mb-4">Third Party</h3>
-
-              {paymentMethods.thirdParty.map((method, index) => (
-                <button
-                  key={index}
-                  onClick={() => handlePaymentMethodSelect(method)}
-                  className="w-full bg-black border border-neutral-700 rounded-lg p-4 flex items-center justify-between hover:border-orange-500 transition-colors mb-3"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">
-                        {method.icon === "simplex" ? "simplex" : "A"}
-                      </span>
-                    </div>
-                    <div className="text-left">
-                      <div className="text-white font-medium">
-                        {method.name}
-                      </div>
-                      <div className="text-gray-400 text-xs">
-                        {method.subtitle}
-                      </div>
-                    </div>
-                  </div>
-                  <span className="text-white">1 USDT = {method.rate} USD</span>
-                </button>
-              ))}
-            </div>
-
-            {/* Confirm Button */}
-            <Link href={"https://dash.fincbloc.com/login"}>
+              {/* Close Button */}
               <button
                 onClick={() => setShowPaymentModal(false)}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold py-4 rounded-lg transition-colors"
+                className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
               >
-                Confirm
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
               </button>
-            </Link>
-          </div>
-        </div>
-      )}
+
+              <h2 className="text-2xl font-bold text-white mb-6">Pay With</h2>
+
+              {/* Recommended Section */}
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-white font-semibold">Recommended</h3>
+                  <span className="text-gray-400 text-sm">Price</span>
+                </div>
+
+                {paymentMethods.recommended.map((method, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handlePaymentMethodSelect(method)}
+                    className="w-full bg-black border border-neutral-700 rounded-lg p-4 flex items-center justify-between hover:border-orange-500 transition-colors mb-3"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex gap-0.5">
+                        <div className="w-5 h-5 bg-red-600 rounded-full"></div>
+                        <div className="w-5 h-5 bg-orange-500 rounded-full -ml-2"></div>
+                      </div>
+                      <span className="text-white font-medium">
+                        {method.name}
+                      </span>
+                    </div>
+                    <span className="text-white">
+                      1 USDT = {method.rate} USD
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Third Party Section */}
+              <div className="mb-6">
+                <h3 className="text-white font-semibold mb-4">Third Party</h3>
+
+                {paymentMethods.thirdParty.map((method, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handlePaymentMethodSelect(method)}
+                    className="w-full bg-black border border-neutral-700 rounded-lg p-4 flex items-center justify-between hover:border-orange-500 transition-colors mb-3"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">
+                          {method.icon === "simplex" ? "simplex" : "A"}
+                        </span>
+                      </div>
+                      <div className="text-left">
+                        <div className="text-white font-medium">
+                          {method.name}
+                        </div>
+                        <div className="text-gray-400 text-xs">
+                          {method.subtitle}
+                        </div>
+                      </div>
+                    </div>
+                    <span className="text-white">
+                      1 USDT = {method.rate} USD
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Confirm Button */}
+              <Link href={"https://dash.fincbloc.com/login"}>
+                <button
+                  onClick={() => setShowPaymentModal(false)}
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold py-4 rounded-lg transition-colors"
+                >
+                  Confirm
+                </button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
